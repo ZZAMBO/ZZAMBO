@@ -1,0 +1,19 @@
+#include "Power.h"
+
+int main()
+{
+	Power a(3, 5), b, c;
+	a.show();
+	
+	b = a + 2;
+	b.show();
+
+	c = a * b;
+	c.show();
+
+	a += b;
+	a.show();
+	
+}
+// 이거는 틀렸다기 보다는 operate 함수 처음봄
+// operate 함수 이용 방법 (연산자 오버로딩)
