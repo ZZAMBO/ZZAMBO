@@ -1,0 +1,29 @@
+#include "Power.h"
+
+void Power::show()
+{
+	cout << "kick : " << kick << " punch : " << punch << endl;
+}
+
+
+Power Power:: operator+(int op2)//반환형이 Power라서 Power Power:: 반환형이 int 면 int Power :: 이겠지?
+{
+	Power tmp;
+	tmp.kick = this->kick + op2;
+	tmp.punch = this->punch + op2;
+	return tmp;
+}
+Power Power:: operator*(Power op2)
+{
+	Power tmp;
+	tmp.kick = this->kick * op2.kick;
+	tmp.punch = this->punch * op2.punch;
+	return tmp;
+}
+Power Power:: operator+=(Power op2)
+{
+	Power tmp;
+	tmp.kick = this->kick += op2.kick;
+	tmp.punch = this->punch += op2.punch;
+	return tmp;
+}
