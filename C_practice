@@ -1,1 +1,30 @@
 
+// call by reference 헷갈려서
+
+# include <iostream>
+using namespace std;
+
+int cbr(int *ptr1,int *ptr2);
+
+int main()
+{
+	int num1, num2;
+	num1 = 10;
+	num2 = 20;
+
+	cbr(&num1,&num2);
+}
+
+int cbr(int* ptr1, int* ptr2)
+{
+	int temp;
+	temp = *ptr1;
+	*ptr1 = *ptr2;
+	*ptr2 = temp;
+
+	*ptr2 = *ptr2 + 2;
+
+	cout << "값은" << *ptr1 <<", " << *ptr2 << endl;
+
+	return 0;
+}
