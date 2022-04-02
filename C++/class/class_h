@@ -1,0 +1,19 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
+class Power
+{
+private:
+	int kick;
+	int punch;
+public:
+	Power(int kick = 0, int punch = 0) : kick(kick), punch(punch)
+	{
+	}
+	void show();
+	Power operator+(int op2);
+	Power operator*(Power op2);
+	Power operator+=(Power op2);
+};
+
